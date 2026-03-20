@@ -21,7 +21,7 @@ const conversions = [
 
 
 const numberInput = document.getElementById('number');
-const convertBtn = document.getElementById('convert-btn');
+const clearBtn = document.getElementById('clear-btn');
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
@@ -59,8 +59,12 @@ numberInput.addEventListener('input', () => {
     debounceTimer = setTimeout(performConversion, 300); // 300ms delay
 });
 
-// Keep button click for immediate conversion
-convertBtn.addEventListener('click', performConversion);
+// Clear button functionality
+clearBtn.addEventListener('click', () => {
+    numberInput.value = '';
+    setDefaults();
+    numberInput.focus(); // Return focus to input for convenience
+});
 
 // Allow Enter key to convert
 numberInput.addEventListener('keypress', (e) => {

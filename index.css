@@ -58,29 +58,27 @@ body {
     outline: none;
 }
 
-#convert-btn {
-    background: var(--card-bg);
+#clear-btn {
+    background: transparent;
     color: var(--text-secondary);
-    border: none;
+    border: 2px solid var(--text-secondary);
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
-    box-shadow: 0 2px 4px #3D3D3D;
     transition: all 0.3s ease;
 }
 
-#convert-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#clear-btn:hover {
     background: var(--text-secondary);
     color: var(--card-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#convert-btn:active {
+#clear-btn:active {
     transform: translateY(0);
-    box-shadow: 0 2px 4px #3D3D3D;
 }
 
 #groups {
