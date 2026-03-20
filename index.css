@@ -1,0 +1,111 @@
+:root {
+    --bg-primary: #6943FF;
+    --bg-secondary: #E8E7F1;
+    --text-primary: #FFFFFF;
+    --text-secondary: #5A537B;
+    --text-tertiary: #353535;
+    --card-bg: #FFFFFF;
+    --border-color: #B295FF;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #6943FF;
+    --bg-secondary: #273549;
+    --text-primary: #FFFFFF;
+    --text-secondary: #CCC1FF;
+    --text-tertiary: #FFFFFF;
+    --card-bg: #2D2B3A;
+    --border-color: #B295FF;
+}
+
+body {
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Inter", sans-serif;
+}
+
+#number {
+    width: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 3px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    text-align: center;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#number:focus {
+    outline: none;
+}
+
+#convert-btn {
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px #3D3D3D;
+}
+
+#groups {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    background: var(--bg-secondary);
+    padding: 20px;
+}
+
+#groups h2 {
+    color: var(--text-secondary);
+}
+
+#groups p {
+    color: var(--text-tertiary);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    margin: 40px 20px;
+}
+
+
+/* Hide the number input arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+#theme-toggle {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 15px;
+}
